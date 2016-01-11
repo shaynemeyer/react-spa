@@ -1,8 +1,8 @@
 {
-  "name": "react-skeleton",
+  "name": "react-spa",
   "version": "1.0.0",
-  "description": "A skeleton for starting reactjs projects",
-  "main": "app.js",
+  "description": "A SPA using ReactJS.",
+  "main": "main.js",
   "scripts": {
     "start": "watchify src/main.jsx -v -t [babelify --presets [ react ] ] -o public/js/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,8 +15,10 @@
   "dependencies": {
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
+    "history": "^1.17.0",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
+    "react-router": "^1.0.3",
     "watchify": "^3.6.1"
   }
 }
