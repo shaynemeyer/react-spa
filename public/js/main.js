@@ -23336,7 +23336,7 @@ var Photos = React.createClass({
 
     return React.createElement(
       'div',
-      null,
+      { className: 'photos-box' },
       photoItems
     );
   }
