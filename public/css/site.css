@@ -8,9 +8,17 @@ header {
   height: 114px;
 }
 
-header a {
+#site-nav {
+  margin-top: 40px;
+}
+
+#site-nav a {
+  margin-left: 10px;
   color: white;
-  text-transform: capitalize;
+}
+
+#site-nav a.active{
+  color: #b8b8b8;
 }
 
 .top-bg {
@@ -24,6 +32,7 @@ header a {
 
 #icon-bar {
   margin-top: 30px;
+  width: 100%;
 }
 
 #icon-bar i {
@@ -31,6 +40,27 @@ header a {
   font-size: 1.5em;
 }
 
-main {
+#body-content {
  position: relative;
+}
+
+.content-box {
+   background-color: white;
+   padding:20px;
+   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+   margin-bottom: 15px;
+}
+
+.content-box .content-box-body .title {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.content-box .content-box-body .alt-title {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.content-box .content-box-body .text {
+  color:#b8b8b8;
 }
