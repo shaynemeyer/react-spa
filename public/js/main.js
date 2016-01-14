@@ -23323,7 +23323,7 @@ var PhotoItem = React.createClass({
     return React.createElement(
       'div',
       { className: 'col-sm-3' },
-      React.createElement('img', { src: `images/photos/${ this.props.image }`, alt: this.props.alt, width: '200' })
+      React.createElement('img', { src: `images/photos/${ this.props.image }`, alt: this.props.alt, width: '220', height: '130' })
     );
   }
 });
@@ -23347,7 +23347,11 @@ var Photos = React.createClass({
     return React.createElement(
       'div',
       { className: 'photos-box' },
-      photoItems
+      React.createElement(
+        'div',
+        null,
+        photoItems
+      )
     );
   }
 });

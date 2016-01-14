@@ -22,7 +22,7 @@ var Photos = React.createClass({
       return <PhotoItem image={item.image} alt={item.alt} />;
     });
 
-    return (<div className="photos-box">{photoItems}</div>);
+    return (<div className="photos-box"><div>{photoItems}</div></div>);
   }
 });
 
