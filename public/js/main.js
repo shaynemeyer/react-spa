@@ -18098,7 +18098,7 @@ module.exports = ReactUpdates;
 
 'use strict';
 
-module.exports = '0.14.5';
+module.exports = '0.14.6';
 },{}],135:[function(require,module,exports){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -22358,15 +22358,21 @@ module.exports = focusNode;
  * @typechecks
  */
 
+/* eslint-disable fb-www/typeof-undefined */
+
 /**
  * Same as document.activeElement but wraps in a try-catch block. In IE it is
  * not safe to call document.activeElement if there is nothing focused.
  *
- * The activeElement will be null only if the document body is not yet defined.
+ * The activeElement will be null only if the document or document body is not
+ * yet defined.
  */
-"use strict";
+'use strict';
 
 function getActiveElement() /*?DOMElement*/{
+  if (typeof document === 'undefined') {
+    return null;
+  }
   try {
     return document.activeElement || document.body;
   } catch (e) {
@@ -23201,6 +23207,10 @@ var History = new CreateHistory({
   queryKey: false
 });
 
+/*
+  for more on React Router: https://github.com/rackt/react-router
+*/
+
 var Base = require('./components/Base.jsx');
 var News = require('./components/News.jsx');
 var Photos = require('./components/Photos.jsx');
@@ -23212,7 +23222,7 @@ var Routes = React.createElement(
     Route,
     { path: '/', component: Base },
     React.createElement(IndexRoute, { component: News }),
-    React.createElement(Route, { path: 'photos', component: Photos })
+    React.createElement(Route, { path: '/photos', component: Photos })
   )
 );
 

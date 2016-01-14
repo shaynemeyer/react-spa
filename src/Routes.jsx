@@ -10,6 +10,10 @@ var History = new CreateHistory({
   queryKey: false
 });
 
+/*
+  for more on React Router: https://github.com/rackt/react-router
+*/
+
 var Base = require('./components/Base.jsx');
 var News = require('./components/News.jsx');
 var Photos = require('./components/Photos.jsx');
@@ -18,7 +22,7 @@ var Routes = (
   <Router history={History}>
     <Route path="/" component={Base}>
       <IndexRoute component={News} />
-      <Route path="photos" component={Photos} />
+      <Route path="/photos" component={Photos} />
     </Route>
   </Router>
 );
